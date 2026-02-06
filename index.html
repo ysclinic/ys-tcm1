@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仁深中醫 - 服務總覽 (手機版)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        .serif { font-family: 'Noto Serif TC', serif; }
+        .bg-silk {
+            background-color: #fdfcf8;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm56-76c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4c5a9' fill-opacity='0.12'/%3E%3C/svg%3E");
+        }
+        .tcm-green { color: #3E5C48; }
+        .bg-tcm-green { background-color: #3E5C48; }
+        .tcm-gold { color: #8C7B50; }
+        
+        /* 為了手機分享長圖，移除固定高度限制 */
+        .main-container {
+            width: 100%;
+            max-width: 500px; /* 標準手機長圖寬度 */
+            margin: 0 auto;
+            border: none;
+        }
+
+        .section-card {
+            background: white;
+            margin: 15px;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(62, 92, 72, 0.1);
+        }
+
+        .sticky-footer {
+            position: sticky;
+            bottom: 0;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="main-container bg-silk flex flex-col min-h-screen">
+        
+        <!-- Header: 簡約大氣 -->
+        <header class="bg-tcm-green text-white py-12 px-6 text-center">
+            <h2 class="text-sm tracking-[0.5em] mb-2 font-light opacity-80">仁 深 仁 術 ． 澤 心 仁 厚</h2>
+            <h1 class="text-4xl serif font-black mb-1">仁深中醫診所</h1>
+            <div class="w-12 h-1 bg-white mx-auto my-4 opacity-30"></div>
+            <p class="text-xs tracking-[0.2em] uppercase font-light">Clinic & Education Overview</p>
+        </header>
+
+        <!-- 第一部分：醫師簡介 (手機版重點放在個人形象) -->
+        <section class="section-card">
+            <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
+                <i class="fa-solid fa-user-doctor tcm-green text-2xl"></i>
+                <h3 class="text-xl font-bold serif tcm-green">駐診醫師簡介</h3>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="w-32 h-40 bg-gray-200 rounded-xl overflow-hidden border-4 border-white shadow-md mb-4">
+                    <img src="doctor.jpg" alt="醫師" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-2xl font-bold tcm-green serif">鄧蕙思 註冊中醫師</h4>
+                <p class="text-[10px] text-tcm-gold font-bold tracking-widest mb-4">Registered Traditional Chinese Medicine Practitioner</p>
+            </div>
+
+            <div class="space-y-4 mt-2">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-sm font-bold text-gray-800 mb-2"><i class="fa-solid fa-graduation-cap mr-2 tcm-gold"></i>專業資歷</p>
+                    <ul class="text-sm text-gray-600 space-y-1 list-disc ml-5">
+                        <li>香港浸會大學中醫學士 (BCM)</li>
+                        <li>現任「THESE HUB文體旅發展研究中心」中醫課程顧問</li>
+                        <li>香港都會大學長者學院導師</li>
+                        <li>自在人生自學計劃「卓越導師獎」</li>
+                        <li>長青活學計劃「卓越導師獎」</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-sm font-bold text-gray-800 mb-2"><i class="fa-solid fa-star mr-2 tcm-gold"></i>臨床專長</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">內科診症、痛症管理、針灸正骨、體質調理及復位推拿</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：醫療服務 (清單式排版) -->
+        <section class="section-card">
+            <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
+                <i class="fa-solid fa-hand-holding-medical tcm-green text-2xl"></i>
+                <h3 class="text-xl font-bold serif tcm-green">專業醫療服務</h3>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex gap-4 items-start">
+                    <span class="text-lg font-black tcm-gold opacity-30 italic">01</span>
+                    <div>
+                        <h4 class="font-bold text-gray-800">全科門診</h4>
+                        <p class="text-sm text-gray-500">感冒咳嗽、腸胃不適、睡眠障礙及皮膚病。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="text-lg font-black tcm-gold opacity-30 italic">02</span>
+                    <div>
+                        <h4 class="font-bold text-gray-800">針灸推拿</h4>
+                        <p class="text-sm text-gray-500">針對五十肩、腰痛、面癱及各類功能調整。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="text-lg font-black tcm-gold opacity-30 italic">03</span>
+                    <div>
+                        <h4 class="font-bold text-gray-800">傷科正骨</h4>
+                        <p class="text-sm text-gray-500">手法復位，針對關節錯位與長期姿勢不良。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="text-lg font-black tcm-gold opacity-30 italic">04</span>
+                    <div>
+                        <h4 class="font-bold text-gray-800">天灸/婦兒調理</h4>
+                        <p class="text-sm text-gray-500">三伏天灸、經後備孕及小兒體質強化。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：教育服務 (彩色卡片式排版) -->
+        <section class="px-[15px] mb-10">
+            <div class="flex items-center gap-4 mb-6 px-4">
+                <i class="fa-solid fa-school-flag tcm-green text-2xl"></i>
+                <h3 class="text-xl font-bold serif tcm-green">校園及社區教育</h3>
+            </div>
+
+            <div class="space-y-4">
+                <!-- 小學 -->
+                <div class="bg-green-600 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                    <i class="fa-solid fa-leaf absolute -right-4 -bottom-4 text-8xl opacity-10"></i>
+                    <h4 class="text-lg font-bold mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-child"></i> 小學：趣味中醫日
+                    </h4>
+                    <p class="text-xs opacity-90 leading-relaxed">
+                        • 醒神香囊手作工作坊<br>
+                        • 中藥園戶外實地考察<br>
+                        • 五感辨識草本植物體驗
+                    </p>
+                </div>
+
+                <!-- 中學 -->
+                <div class="bg-yellow-700 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                    <i class="fa-solid fa-user-graduate absolute -right-4 -bottom-4 text-8xl opacity-10"></i>
+                    <h4 class="text-lg font-bold mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-compass"></i> 中學：生涯規劃講座
+                    </h4>
+                    <p class="text-xs opacity-90 leading-relaxed">
+                        • 中醫就業前景講座<br>
+                        • 診所影子實習體驗<br>
+                        • 臨床基礎脈診教學
+                    </p>
+                </div>
+
+                <!-- 企業 -->
+                <div class="bg-blue-800 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                    <i class="fa-solid fa-users absolute -right-4 -bottom-4 text-8xl opacity-10"></i>
+                    <h4 class="text-lg font-bold mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-heart-pulse"></i> 企業/團體講座
+                    </h4>
+                    <p class="text-xs opacity-90 leading-relaxed">
+                        • 辦公室伸展與穴位減壓<br>
+                        • 四季養生食療建議
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <footer class="bg-white border-t border-gray-100 p-8 text-center pb-24">
+            <div class="space-y-4 text-sm text-gray-600 mb-8">
+                <p class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-location-dot tcm-gold"></i>
+                    荃灣新領域廣場1208室
+                </p>
+                <p class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-clock tcm-gold"></i>
+                    星期一至日 09:00 - 19:30
+                </p>
+            </div>
+            
+            <div class="flex justify-center gap-6 mb-8 opacity-50">
+                <i class="fa-brands fa-instagram text-2xl"></i>
+                <i class="fa-brands fa-facebook text-2xl"></i>
+                <i class="fa-solid fa-earth-asia text-2xl"></i>
+            </div>
+            
+            <p class="text-[10px] text-gray-300 tracking-[0.3em] uppercase">YS Chinese Medicine Clinic</p>
+        </footer>
+
+        <!-- 底部固定 WhatsApp 按鈕 (手機版專屬體驗) -->
+        <div class="sticky-footer bg-white border-t border-gray-100 p-4 flex justify-center shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
+            <a href="https://wa.me/85251179442" class="bg-tcm-green text-white w-full py-4 rounded-xl flex items-center justify-center gap-3 font-bold text-lg active:scale-95 transition-transform">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                立即預約 / 查詢 (5117 9442)
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
