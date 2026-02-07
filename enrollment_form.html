@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動申請表 - 仁深中醫診所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8f9fa; }
+        .serif { font-family: 'Noto Serif TC', serif; }
+        .tcm-green { color: #3E5C48; }
+        .bg-tcm-green { background-color: #3E5C48; }
+        .border-tcm { border-color: #3E5C48; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-2xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100">
+        <!-- Header -->
+        <div class="bg-tcm-green text-white p-8 text-center">
+            <h1 class="text-2xl md:text-3xl serif font-bold mb-2">中醫文化及生涯規劃</h1>
+            <h2 class="text-lg opacity-90">校園體驗計劃 ｜ 活動申請表</h2>
+        </div>
+
+        <form id="enrollmentForm" class="p-6 md:p-10 space-y-8">
+            
+            <!-- Section 1: School Info -->
+            <section>
+                <h3 class="text-xl font-bold tcm-green mb-4 border-l-4 border-tcm pl-3 serif">一、 學校基本資料</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">學校名稱</label>
+                        <input type="text" id="schoolName" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 border focus:ring-tcm-green focus:border-tcm-green">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">負責老師/聯絡人</label>
+                            <input type="text" id="teacherName" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 border">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">職位</label>
+                            <input type="text" id="position" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 border">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">聯絡電話</label>
+                            <input type="tel" id="phone" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 border">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">電郵</label>
+                            <input type="email" id="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 border">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Program Options -->
+            <section>
+                <h3 class="text-xl font-bold tcm-green mb-4 border-l-4 border-tcm pl-3 serif">二、 擬辦活動選項 (可多選)</h3>
+                
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="font-bold text-gray-800 mb-2">【小學部：小小華佗體驗營】</p>
+                        <label class="flex items-center space-x-3 mb-2">
+                            <input type="checkbox" name="activity" value="小學-趣味中醫日" class="w-4 h-4 text-tcm-green">
+                            <span class="text-sm text-gray-700">A. 到校活動：趣味中醫日</span>
+                        </label>
+                        <label class="flex items-center space-x-3 mb-2">
+                            <input type="checkbox" name="activity" value="小學-小小採藥師" class="w-4 h-4 text-tcm-green">
+                            <span class="text-sm text-gray-700">B. 戶外考察：小小採藥師</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="font-bold text-gray-800 mb-2">【中學部：杏林新星導航】</p>
+                        <label class="flex items-center space-x-3 mb-2">
+                            <input type="checkbox" name="activity" value="中學-生涯規劃講座" class="w-4 h-4 text-tcm-green">
+                            <span class="text-sm text-gray-700">A. 生涯規劃講座</span>
+                        </label>
+                        <label class="flex items-center space-x-3 mb-2">
+                            <input type="checkbox" name="activity" value="中學-臨床初探工作坊" class="w-4 h-4 text-tcm-green">
+                            <span class="text-sm text-gray-700">B. 臨床初探工作坊</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" name="activity" value="中學-診所參觀" class="w-4 h-4 text-tcm-green">
+                            <span class="text-sm text-gray-700">C. 診所參觀 / 影子實習</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Details -->
+            <section>
+                <h3 class="text-xl font-bold tcm-green mb-4 border-l-4 border-tcm pl-3 serif">三、 預計活動詳情</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">預計日期 (首選)</label>
+                        <input type="date" id="date1" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 border">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">預計參與人數</label>
+                        <input type="number" id="attendees" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 border" placeholder="例如: 30">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Remarks -->
+            <section>
+                <h3 class="text-xl font-bold tcm-green mb-4 border-l-4 border-tcm pl-3 serif">四、 備註及特別要求</h3>
+                <textarea id="remarks" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 border" placeholder="學生的特殊需要或希望重點講解的特定課題..."></textarea>
+            </section>
+
+            <!-- Submit Button -->
+            <div class="pt-6">
+                <button type="submit" class="w-full bg-tcm-green text-white py-4 px-6 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg active:scale-95">
+                    提交申請 (經 WhatsApp 發送)
+                </button>
+                <p class="text-center text-xs text-gray-400 mt-4">提交後將自動跳轉至 WhatsApp 發送報名資料</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Collect data
+            const school = document.getElementById('schoolName').value;
+            const teacher = document.getElementById('teacherName').value;
+            const pos = document.getElementById('position').value;
+            const tel = document.getElementById('phone').value;
+            const mail = document.getElementById('email').value;
+            const date = document.getElementById('date1').value;
+            const num = document.getElementById('attendees').value;
+            const rem = document.getElementById('remarks').value;
+
+            // Collect checked activities
+            let activities = [];
+            document.querySelectorAll('input[name="activity"]:checked').forEach(cb => {
+                activities.push(cb.value);
+            });
+
+            // Construct WhatsApp message
+            const message = `*【仁深中醫 - 活動申請表】*%0A` +
+                            `--------------------------%0A` +
+                            `*學校名稱:* ${school}%0A` +
+                            `*聯絡人:* ${teacher} (${pos})%0A` +
+                            `*電話:* ${tel}%0A` +
+                            `*電郵:* ${mail}%0A%0A` +
+                            `*擬辦活動:* ${activities.join(', ') || '未選擇'}%0A` +
+                            `*預計日期:* ${date}%0A` +
+                            `*參與人數:* ${num}%0A%0A` +
+                            `*備註:* ${rem}`;
+
+            // Redirect to WhatsApp
+            window.location.href = `https://wa.me/85251179442?text=${message}`;
+        });
+    </script>
+</body>
+</html>
