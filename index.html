@@ -23,10 +23,9 @@
         .bg-tcm-green { background-color: #3E5C48; }
         .tcm-gold { color: #8C7B50; }
         
-        /* 為了手機分享長圖，移除固定高度限制 */
         .main-container {
             width: 100%;
-            max-width: 500px; /* 標準手機長圖寬度 */
+            max-width: 500px;
             margin: 0 auto;
             border: none;
         }
@@ -51,15 +50,29 @@
 
     <div class="main-container bg-silk flex flex-col min-h-screen">
         
-        <!-- Header: 簡約大氣 -->
-        <header class="bg-tcm-green text-white py-12 px-6 text-center">
-            <h2 class="text-sm tracking-[0.5em] mb-2 font-light opacity-80">仁 深 仁 術 ． 澤 心 仁 厚</h2>
-            <h1 class="text-4xl serif font-black mb-1">仁深中醫診所</h1>
-            <div class="w-12 h-1 bg-white mx-auto my-4 opacity-30"></div>
-            <p class="text-xs tracking-[0.2em] uppercase font-light">Clinic & Education Overview</p>
+        <!-- Header -->
+        <header class="bg-tcm-green text-white py-10 px-6 text-center relative overflow-hidden">
+            <!-- 背景裝飾 -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <i class="fa-solid fa-cloud text-8xl absolute -top-4 -left-4"></i>
+                <i class="fa-solid fa-cloud text-8xl absolute top-10 -right-4"></i>
+            </div>
+
+            <!-- Logo 區域 -->
+            <div class="mb-5 relative z-10">
+                <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg p-2">
+                    <!-- 請將 logo.png 換成你的 Logo 檔案 -->
+                    <img src="logo.png" alt="Logo" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/150x150?text=LOGO'">
+                </div>
+            </div>
+
+            <h2 class="text-xs tracking-[0.4em] mb-2 font-light opacity-80 relative z-10">仁 心 仁 術 ． 深 入 淺 出</h2>
+            <h1 class="text-4xl serif font-black mb-1 relative z-10">仁深中醫診所</h1>
+            <div class="w-12 h-1 bg-white mx-auto my-4 opacity-30 relative z-10"></div>
+            <p class="text-xs tracking-[0.2em] uppercase font-light relative z-10">Clinic & Education Overview</p>
         </header>
 
-        <!-- 第一部分：醫師簡介 (手機版重點放在個人形象) -->
+        <!-- 第一部分：醫師簡介 (照片放大版) -->
         <section class="section-card">
             <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
                 <i class="fa-solid fa-user-doctor tcm-green text-2xl"></i>
@@ -67,17 +80,25 @@
             </div>
 
             <div class="flex flex-col items-center">
-                <div class="w-32 h-40 bg-gray-200 rounded-xl overflow-hidden border-4 border-white shadow-md mb-4">
+                <!-- 照片尺寸 -->
+                <div class="w-48 h-64 bg-gray-200 rounded-xl overflow-hidden border-4 border-white shadow-md mb-5">
+                    <!-- 請將 doctor.jpg 換成你的照片 -->
                     <img src="doctor.jpg" alt="醫師" class="w-full h-full object-cover">
                 </div>
-                <h4 class="text-2xl font-bold tcm-green serif">鄧蕙思 註冊中醫師</h4>
-                <p class="text-[10px] text-tcm-gold font-bold tracking-widest mb-4">Registered Traditional Chinese Medicine Practitioner</p>
+                
+                <div class="flex items-baseline gap-2 mb-1 flex-wrap justify-center">
+                    <h4 class="text-2xl font-bold tcm-green serif">鄧蕙思</h4>
+                    <!-- 1. 修改英文名 -->
+                    <span class="text-sm font-medium tcm-gold tracking-widest uppercase opacity-80">Rachel Tang Wai Sze</span>
+                </div>
+                <h5 class="text-sm font-bold text-gray-700 mb-4">註冊中醫師</h5>
+                <p class="text-[9px] text-gray-400 font-bold tracking-[0.2em] uppercase mb-4 border-y border-gray-100 py-1">Registered Traditional Chinese Medicine Practitioner</p>
             </div>
 
             <div class="space-y-4 mt-2">
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-sm font-bold text-gray-800 mb-2"><i class="fa-solid fa-graduation-cap mr-2 tcm-gold"></i>專業資歷</p>
-                    <ul class="text-sm text-gray-600 space-y-1 list-disc ml-5">
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                    <p class="text-sm font-bold text-gray-800 mb-3 flex items-center"><i class="fa-solid fa-graduation-cap mr-2 tcm-gold"></i>專業資歷</p>
+                    <ul class="text-sm text-gray-600 space-y-2 list-disc ml-5 leading-relaxed">
                         <li>香港浸會大學中醫學士 (BCM)</li>
                         <li>現任「THESE HUB文體旅發展研究中心」中醫課程顧問</li>
                         <li>香港都會大學長者學院導師</li>
@@ -85,14 +106,15 @@
                         <li>長青活學計劃「卓越導師獎」</li>
                     </ul>
                 </div>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-sm font-bold text-gray-800 mb-2"><i class="fa-solid fa-star mr-2 tcm-gold"></i>臨床專長</p>
-                    <p class="text-sm text-gray-600 leading-relaxed">內科診症、痛症管理、針灸正骨、體質調理及復位推拿</p>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                    <p class="text-sm font-bold text-gray-800 mb-2 flex items-center"><i class="fa-solid fa-star mr-2 tcm-gold"></i>臨床專長</p>
+                    <!-- 2. 加埋內科診症喺最前面 -->
+                    <p class="text-sm text-gray-600 leading-relaxed">內科診症、痛症管理、針灸推拿、體質調理及復位正骨。</p>
                 </div>
             </div>
         </section>
 
-        <!-- 第二部分：醫療服務 (清單式排版) -->
+        <!-- 第二部分：醫療服務 -->
         <section class="section-card">
             <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
                 <i class="fa-solid fa-hand-holding-medical tcm-green text-2xl"></i>
@@ -103,112 +125,106 @@
                 <div class="flex gap-4 items-start">
                     <span class="text-lg font-black tcm-gold opacity-30 italic">01</span>
                     <div>
-                        <h4 class="font-bold text-gray-800">全科門診</h4>
-                        <p class="text-sm text-gray-500">感冒咳嗽、腸胃不適、睡眠障礙及皮膚病。</p>
+                        <h4 class="font-bold text-gray-800 text-base">全科門診</h4>
+                        <p class="text-sm text-gray-600 mt-1">感冒咳嗽、腸胃不適、睡眠障礙及皮膚病。</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <span class="text-lg font-black tcm-gold opacity-30 italic">02</span>
                     <div>
-                        <h4 class="font-bold text-gray-800">針灸推拿</h4>
-                        <p class="text-sm text-gray-500">針對五十肩、腰痛、面癱及各類功能調整。</p>
+                        <h4 class="font-bold text-gray-800 text-base">針灸推拿</h4>
+                        <p class="text-sm text-gray-600 mt-1">針對五十肩、腰痛、面癱及各類功能調整。</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <span class="text-lg font-black tcm-gold opacity-30 italic">03</span>
                     <div>
-                        <h4 class="font-bold text-gray-800">傷科正骨</h4>
-                        <p class="text-sm text-gray-500">手法復位，針對關節錯位與長期姿勢不良。</p>
+                        <h4 class="font-bold text-gray-800 text-base">傷科正骨</h4>
+                        <p class="text-sm text-gray-600 mt-1">手法復位，針對關節錯位與長期姿勢不良。</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <span class="text-lg font-black tcm-gold opacity-30 italic">04</span>
                     <div>
-                        <h4 class="font-bold text-gray-800">天灸/婦兒調理</h4>
-                        <p class="text-sm text-gray-500">三伏天灸、經後備孕及小兒體質強化。</p>
+                        <h4 class="font-bold text-gray-800 text-base">天灸/婦兒調理</h4>
+                        <p class="text-sm text-gray-600 mt-1">三伏天灸、經後備孕及小兒體質強化。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 第三部分：教育服務 (彩色卡片式排版) -->
-        <section class="px-[15px] mb-10">
-            <div class="flex items-center gap-4 mb-6 px-4">
+        <!-- 第三部分：教育服務 (字體加大版，3. 增加上方間距) -->
+        <section class="px-[15px] mb-10 mt-12">
+            <!-- mt-12 增加了與上方的距離 -->
+            <div class="flex items-center gap-4 mb-6 px-4 pt-4 border-t-2 border-gray-100 border-dashed">
                 <i class="fa-solid fa-school-flag tcm-green text-2xl"></i>
                 <h3 class="text-xl font-bold serif tcm-green">校園及社區教育</h3>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-5">
                 <!-- 小學 -->
-                <div class="bg-green-600 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                <div class="bg-green-600 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden">
                     <i class="fa-solid fa-leaf absolute -right-4 -bottom-4 text-8xl opacity-10"></i>
-                    <h4 class="text-lg font-bold mb-2 flex items-center gap-2">
+                    <h4 class="text-lg font-bold mb-3 flex items-center gap-2 border-b border-green-500 pb-2">
                         <i class="fa-solid fa-child"></i> 小學：趣味中醫日
                     </h4>
-                    <p class="text-xs opacity-90 leading-relaxed">
-                        • 醒神香囊手作工作坊<br>
-                        • 中藥園戶外實地考察<br>
-                        • 五感辨識草本植物體驗
-                    </p>
+                    <ul class="text-sm opacity-95 leading-7 list-disc ml-5 font-medium">
+                        <li>醒神香囊手作工作坊</li>
+                        <li>中藥園戶外實地考察</li>
+                        <li>五感辨識草本植物體驗</li>
+                    </ul>
                 </div>
 
                 <!-- 中學 -->
-                <div class="bg-yellow-700 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                <div class="bg-yellow-700 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden">
                     <i class="fa-solid fa-user-graduate absolute -right-4 -bottom-4 text-8xl opacity-10"></i>
-                    <h4 class="text-lg font-bold mb-2 flex items-center gap-2">
+                    <h4 class="text-lg font-bold mb-3 flex items-center gap-2 border-b border-yellow-600 pb-2">
                         <i class="fa-solid fa-compass"></i> 中學：生涯規劃講座
                     </h4>
-                    <p class="text-xs opacity-90 leading-relaxed">
-                        • 中醫就業前景講座<br>
-                        • 診所影子實習體驗<br>
-                        • 臨床基礎脈診教學
-                    </p>
+                    <ul class="text-sm opacity-95 leading-7 list-disc ml-5 font-medium">
+                        <li>中醫就業前景與JUPAS講座</li>
+                        <li>診所影子實習體驗</li>
+                        <li>臨床基礎脈診教學</li>
+                    </ul>
                 </div>
 
                 <!-- 企業 -->
-                <div class="bg-blue-800 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                <div class="bg-blue-800 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden">
                     <i class="fa-solid fa-users absolute -right-4 -bottom-4 text-8xl opacity-10"></i>
-                    <h4 class="text-lg font-bold mb-2 flex items-center gap-2">
+                    <h4 class="text-lg font-bold mb-3 flex items-center gap-2 border-b border-blue-700 pb-2">
                         <i class="fa-solid fa-heart-pulse"></i> 企業/團體講座
                     </h4>
-                    <p class="text-xs opacity-90 leading-relaxed">
-                        • 辦公室伸展與穴位減壓<br>
-                        • 四季養生食療建議
-                    </p>
+                    <ul class="text-sm opacity-95 leading-7 list-disc ml-5 font-medium">
+                        <li>辦公室伸展與穴位減壓</li>
+                        <li>四季養生食療建議</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Footer / Contact -->
+        <!-- Footer -->
         <footer class="bg-white border-t border-gray-100 p-8 text-center pb-24">
             <div class="space-y-4 text-sm text-gray-600 mb-8">
-                <p class="flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-location-dot tcm-gold"></i>
+                <p class="flex items-center justify-center gap-2 font-medium">
+                    <i class="fa-solid fa-location-dot tcm-gold text-lg"></i>
                     荃灣新領域廣場1208室
                 </p>
-                <p class="flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-clock tcm-gold"></i>
+                <p class="flex items-center justify-center gap-2 font-medium">
+                    <i class="fa-solid fa-clock tcm-gold text-lg"></i>
                     星期一至日 09:00 - 19:30
                 </p>
-            </div>
-            
-            <div class="flex justify-center gap-6 mb-8 opacity-50">
-                <i class="fa-brands fa-instagram text-2xl"></i>
-                <i class="fa-brands fa-facebook text-2xl"></i>
-                <i class="fa-solid fa-earth-asia text-2xl"></i>
             </div>
             
             <p class="text-[10px] text-gray-300 tracking-[0.3em] uppercase">YS Chinese Medicine Clinic</p>
         </footer>
 
-        <!-- 底部固定 WhatsApp 按鈕 (手機版專屬體驗) -->
+        <!-- WhatsApp Button -->
         <div class="sticky-footer bg-white border-t border-gray-100 p-4 flex justify-center shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
             <a href="https://wa.me/85251179442" class="bg-tcm-green text-white w-full py-4 rounded-xl flex items-center justify-center gap-3 font-bold text-lg active:scale-95 transition-transform">
                 <i class="fa-brands fa-whatsapp text-2xl"></i>
                 立即預約 / 查詢 (5117 9442)
             </a>
         </div>
-
     </div>
 
 </body>
